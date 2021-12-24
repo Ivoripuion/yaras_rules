@@ -9,5 +9,6 @@ rule x64_meterpreter_reverse_tcp
     $s1 = {48 B9 ?? ?? ?? ?? ?? ?? ?? ?? 51 48 89 E6 6A 10 5A 6A 2A 58 0F 05 59 48 85 C0 79 25}
   
   condition:
-    all of them
+    all of them and uint32(0) == 0x464C457F
+
 }
