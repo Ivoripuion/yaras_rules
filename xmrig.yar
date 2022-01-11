@@ -7,7 +7,8 @@ rule xmrig
   
   strings:
     $s1 = "Usage: xmrig "
-  
+    $s2 = "stratum+tcp"
+
   condition:
     $s1 and uint32(0) == 0x464C457F
 }
