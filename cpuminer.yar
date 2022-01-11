@@ -1,4 +1,4 @@
-rule xmrig
+rule cpuminer
 {
   meta:
     description = "https://github.com/pooler/cpuminer"
@@ -9,5 +9,5 @@ rule xmrig
     $s1 = "submit_upstream_work"
   
   condition:
-    1 of $s and uint32(0) == 0x464C457F
+    any of ($s*) and uint32(0) == 0x464C457F
 }
