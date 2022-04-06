@@ -1,4 +1,4 @@
-rule rule_name
+rule tsh
 {
   meta:
     description = "https://github.com/orangetw/tsh"
